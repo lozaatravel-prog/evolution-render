@@ -3,7 +3,7 @@ services:
     name: evolution-lozaa
     runtime: image
     image:
-      url: docker.io/evoapicloud/evolution-api:v2.3.6
+      url: docker.io/evoapicloud/evolution-api:latest
     plan: free
     region: virginia
     healthCheckPath: /
@@ -53,7 +53,7 @@ services:
       - key: TYPEBOT_API_VERSION
         value: latest
       - key: CONFIG_SESSION_PHONE_CLIENT
-        value: Secar 20 Dias
+        value: Evolution API
       - key: CONFIG_SESSION_PHONE_NAME
         value: Chrome
       - key: LANGUAGE

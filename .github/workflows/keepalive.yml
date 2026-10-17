@@ -1,0 +1,11 @@
+name: Manter Evolution acordada
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - run: curl -s -m 60 -o /dev/null -w "%{http_code}\n" https://evolution-lozaa.onrender.com/ || true
